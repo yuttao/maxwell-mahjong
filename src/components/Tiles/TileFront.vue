@@ -1,7 +1,7 @@
 <template>
   <rect
     width="270"
-    height="375"
+    height="365"
     x="10"
     y="10"
     ry="20"

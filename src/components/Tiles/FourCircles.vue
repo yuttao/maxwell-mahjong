@@ -4,7 +4,7 @@ import CircleSymbol from "./CircleSymbol.vue";
 </script>
 
 <template>
-  <svg viewBox="0 0 290 395" :width="width" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 290 385" :width="width" xmlns="http://www.w3.org/2000/svg">
     <CircleSymbol />
     <TileFront />
     <use
@@ -18,7 +18,7 @@ import CircleSymbol from "./CircleSymbol.vue";
     <use
       href="#CircleSymbol"
       :x="xoff"
-      :y="395 - yoff - R"
+      :y="385 - yoff - R"
       :height="R"
       :width="R"
       stroke="darkblue"
@@ -34,7 +34,7 @@ import CircleSymbol from "./CircleSymbol.vue";
     <use
       href="#CircleSymbol"
       :x="290 - xoff - R"
-      :y="395 - yoff - R"
+      :y="385 - yoff - R"
       :height="R"
       :width="R"
       stroke="darkgreen"

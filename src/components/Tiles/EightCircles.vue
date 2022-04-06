@@ -8,41 +8,50 @@ import CircleSymbol from "./CircleSymbol.vue";
     <CircleSymbol />
     <TileFront />
     <use
+      v-for="l in list"
       href="#CircleSymbol"
-      :x="145 - r"
-      :y="off"
-      :width="R"
+      :x="l.x"
+      :y="l.y"
       :height="R"
-      stroke="darkblue"
-    />
-    <use
-      href="#CircleSymbol"
-      :x="145 - r"
-      :y="385 - R - off"
       :width="R"
-      :height="R"
-      stroke="darkgreen"
+      :stroke="l.color"
     />
   </svg>
 </template>
 
 <script lang="ts">
+type def = {
+  x: number;
+  y: number;
+  color: string;
+};
 export default {
   props: {
     width: Number,
   },
   data: function () {
     return {
-      r: 60,
-      off: 60,
+      r: 40,
     };
   },
   computed: {
     R: function () {
       return this.r + this.r;
     },
-    x: function () {
-      return 145 - this.r;
+    list: function () {
+      let ret: def[] = [];
+      let top = (385 - 4 * this.R) / 2;
+      for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 2; j++) {
+          let a: def = {
+            x: 145 - j * this.R,
+            y: top + this.R * i,
+            color: "black",
+          };
+          ret.push(a);
+        }
+      }
+      return ret;
     },
   },
 };

@@ -9,43 +9,59 @@ import CircleSymbol from "./CircleSymbol.vue";
     <TileFront />
     <use
       href="#CircleSymbol"
-      :x="xoff"
-      :y="yoff"
+      :x="145 - R - r + 10"
+      :y="yoff - 10"
       :height="R"
       :width="R"
       stroke="darkgreen"
     />
     <use
       href="#CircleSymbol"
-      :x="xoff"
-      :y="385 - yoff - R"
+      :x="145 - r"
+      :y="yoff + 20"
       :height="R"
       :width="R"
-      stroke="darkblue"
+      stroke="darkgreen"
     />
     <use
       href="#CircleSymbol"
-      :x="145 - r"
-      :y="197.5 - r"
+      :x="145 + r -10"
+      :y="yoff + 50"
+      :height="R"
+      :width="R"
+      stroke="darkgreen"
+    />
+    <use
+      href="#CircleSymbol"
+      :x="145 - R"
+      :y="385 - yoff - R"
       :height="R"
       :width="R"
       stroke="darkred"
     />
     <use
       href="#CircleSymbol"
-      :x="290 - xoff - R"
-      :y="yoff"
+      :x="145 - R"
+      :y="385 - yoff - R - R"
       :height="R"
       :width="R"
-      stroke="darkblue"
+      stroke="darkred"
     />
     <use
       href="#CircleSymbol"
-      :x="290 - xoff - R"
+      :x="145"
+      :y="385 - yoff - R - R"
+      :height="R"
+      :width="R"
+      stroke="darkred"
+    />
+    <use
+      href="#CircleSymbol"
+      :x="145"
       :y="385 - yoff - R"
       :height="R"
       :width="R"
-      stroke="darkgreen"
+      stroke="darkred"
     />
   </svg>
 </template>
@@ -57,9 +73,9 @@ export default {
   },
   data: function () {
     return {
-      r: 45,
+      r: 40,
       yoff: 55,
-      xoff: 45,
+      xoff: 55,
     };
   },
   computed: {
